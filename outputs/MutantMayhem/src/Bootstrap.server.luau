@@ -2,6 +2,12 @@ local Players=game:GetService("Players")
 local Rep=game:GetService("ReplicatedStorage")
 if not workspace:FindFirstChild("MM_World") then require(script.Parent.MapBuilder).Build() end
 local Services=script.Parent.Services
+local WorldRemaster=require(Services.WorldRemaster)
+do
+ local ok,result,reason=pcall(WorldRemaster.Apply,workspace.MM_World)
+ if not ok then WorldRemaster.Rollback(workspace.MM_World) warn("World remaster rolled back: "..tostring(result))
+ elseif not result then warn("World remaster skipped: "..tostring(reason)) end
+end
 local D=require(Services.PlayerDataService)
 local P=require(Services.PlotService)
 local C=require(Services.CreatureService)
@@ -35,7 +41,9 @@ end
 local function render(player)
 	C.Render(player) local plot=P.Assigned[player] local d=D.Get(player)
 	if plot and d then
+		WorldRemaster.SetTier(plot,d.Tier)
 		plot.Canopy.Color=d.Cosmetics.ResearchTrim and Color3.fromRGB(245,199,106) or (d.Style=="Aurora" and Color3.fromRGB(178,165,217) or Color3.fromRGB(241,143,122))
+		WorldRemaster.RefreshStyle(plot)
 		plot.Sign.BillboardGui.TextLabel.Text=player.DisplayName.."'S LAB"..(d.Research>0 and " • R"..d.Research or "")
 		local badge=plot:FindFirstChild("WeeklyBadge")
 		if d.Cosmetics.WeeklyGlow and not badge then
