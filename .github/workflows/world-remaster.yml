@@ -1,0 +1,56 @@
+name: World remaster cloud build
+on:
+  push:
+    branches: [feature/world-remaster]
+    paths:
+      - "outputs/MutantMayhem/src/**"
+      - "outputs/MutantMayhem/default.project.json"
+      - "remaster/**"
+      - ".github/workflows/world-remaster.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: world-remaster-cloud
+  cancel-in-progress: true
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install cloud Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends blender
+          mkdir -p remaster/build
+          blender --background --factory-startup --python-expr "import bpy,json,pathlib; pathlib.Path('remaster/build/capabilities.json').write_text(json.dumps({'blender':bpy.app.version_string,'host':'github-hosted ubuntu-24.04','studio_available':False})); print('CLOUD_BLENDER_READY',bpy.app.version_string)"
+      - name: Install pinned Luau CLI
+        run: |
+          curl -fLsS https://github.com/luau-lang/luau/releases/download/0.743/luau-ubuntu.zip -o /tmp/luau.zip
+          echo "99d45afb4afaee00ba631c526c8e8c76c67b60f6f119953ce6409be6d6953663  /tmp/luau.zip" | sha256sum -c -
+          mkdir -p /tmp/luau
+          unzip -q /tmp/luau.zip -d /tmp/luau
+          chmod +x /tmp/luau/luau*
+      - name: Compile Luau sources
+        run: |
+          find outputs/MutantMayhem/src -name '*.luau' -print0 | while IFS= read -r -d '' path; do /tmp/luau/luau-compile "$path" > /dev/null; done
+      - name: Test remaster contracts
+        run: |
+          if [ -f remaster/tests/test_contracts.py ]; then python3 remaster/tests/test_contracts.py; fi
+          if [ -f remaster/tests/tiers.luau ]; then /tmp/luau/luau remaster/tests/tiers.luau; fi
+      - name: Generate Blender assets and preview
+        run: |
+          if [ -f remaster/blender/build_environment.py ]; then blender --background --factory-startup --python-exit-code 1 --python remaster/blender/build_environment.py; fi
+      - name: Export verification
+        run: |
+          if [ -f remaster/tests/test_exports.py ]; then python3 remaster/tests/test_exports.py; fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: world-remaster-cloud-artifacts
+          path: remaster/build/
+          if-no-files-found: error
+          retention-days: 90
