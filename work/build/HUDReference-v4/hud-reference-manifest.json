@@ -1,0 +1,28 @@
+{
+  "revision": "ReferenceLayoutV4",
+  "studioApplied": true,
+  "atlasUploadConfirmed": false,
+  "nativePlaceSaveConfirmed": false,
+  "referenceExact": false,
+  "sourceFiles": [
+    "src/Shared/UI/HUDSkin.luau",
+    "src/Shared/UI/HUDAtlas.luau",
+    "src/Shared/UI/Components.luau",
+    "src/Client/UI/HUDController.luau"
+  ],
+  "screenshots": [
+    "screenshots/reference-hud-desktop.jpg",
+    "screenshots/reference-hud-phone.jpg"
+  ],
+  "checks": {
+    "firstPet": "passed",
+    "collect": "passed:100->120",
+    "petsNavigation": "passed",
+    "desktopTextOverflow": 0,
+    "phonePortraitTextOverflow": 0,
+    "phoneLandscapeTextOverflow": 0,
+    "finalLandscapeRailHeight": "not recaptured",
+    "guiRoots": 1,
+    "mmRuntimeErrors": 0
+  }
+}

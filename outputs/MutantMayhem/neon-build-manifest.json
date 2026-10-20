@@ -1,0 +1,169 @@
+{
+  "PlaceId": 129621048489588,
+  "SourceCount": 40,
+  "Build": "3-neon-ui",
+  "Date": "2026-10-19",
+  "SourceHashes": [
+    {
+      "File": "src/Bootstrap.server.luau",
+      "SHA256": "0E217BF7EF1260E3DD35E2820015845F99F3225548F0EB43E9F6FC5792272461"
+    },
+    {
+      "File": "src/MapBuilder.luau",
+      "SHA256": "85BED8DE259D5AD888E10E3BCED58DD13D75A4E81668AD56E60A09AA75B861D9"
+    },
+    {
+      "File": "src/Client/Animation.client.luau",
+      "SHA256": "6B2718DDC94BB77A2B5F31376BC58B370E111843F238E11A80F6CD3072A4489B"
+    },
+    {
+      "File": "src/Client/Main.client.luau",
+      "SHA256": "5551BF5AC33E685779C2BE54190BAFFC23A20599E18C08F87090EE896C7C4D78"
+    },
+    {
+      "File": "src/Client/UI/BaseUpgradeController.luau",
+      "SHA256": "628B6EF96DE0EE4FF09C5DF20E84AC2D74138C68DA0E604CF20A532005B91054"
+    },
+    {
+      "File": "src/Client/UI/DataAdapter.luau",
+      "SHA256": "958CB65294ACE43B0641218BA2E4CE2F0D95075CAAEDE709690A58CDCE375FF5"
+    },
+    {
+      "File": "src/Client/UI/HUDController.luau",
+      "SHA256": "03AF4E32A605FD373881B1FC53AFCB76A5389FABA74A571A438170AFF06F2181"
+    },
+    {
+      "File": "src/Client/UI/InventoryController.luau",
+      "SHA256": "482AF159B12614AADDEDF932E3866DE1D147AD2BBBF4317653D20EB034CDFDED"
+    },
+    {
+      "File": "src/Client/UI/MapController.luau",
+      "SHA256": "B0E749793A3BE3C66549CB78DCD80E0CD4B316AF1D971CBF9863A441425F3829"
+    },
+    {
+      "File": "src/Client/UI/MissionsController.luau",
+      "SHA256": "3F63DBA8AA3B5056CDF4D027DE91A22D72BCAA0E5114F27D953E117A6F5B8A9B"
+    },
+    {
+      "File": "src/Client/UI/MutationController.luau",
+      "SHA256": "CBCCC667A19E1692F0D2949A70F72ED7516CBCE458C149CC25028D40A55D577F"
+    },
+    {
+      "File": "src/Client/UI/NavigationController.luau",
+      "SHA256": "6EDD0F05BFAE3D99AB1D591C03B8BD76A2BF62C44D3DE9B0F8465B25D30504AD"
+    },
+    {
+      "File": "src/Client/UI/Overlays.luau",
+      "SHA256": "2474882F99C3BBBD79526687DAA0911C8FD2270F179F9448AB9F482FC9989A97"
+    },
+    {
+      "File": "src/Client/UI/PetDetailsController.luau",
+      "SHA256": "40C596AB6C1E4AF0A5CA1AB162442D7C69DFC7DF18A13B286708A50C690BDC66"
+    },
+    {
+      "File": "src/Client/UI/ShopController.luau",
+      "SHA256": "12C2B004DBB893895023CB8E0EB42007BAAB4141D7AD83BF4287989E44669FD0"
+    },
+    {
+      "File": "src/Client/UI/SocialController.luau",
+      "SHA256": "707F4699EA7006A1304E60D394CC110B45A6A1FB7210F55A9870C3A037AACF46"
+    },
+    {
+      "File": "src/Client/UI/TooltipController.luau",
+      "SHA256": "9D3335E6BB3B43EC06900F4249CFFF7F4BB1616A7D9866AABD7D011EB5B143B3"
+    },
+    {
+      "File": "src/Client/UI/UIApp.luau",
+      "SHA256": "E2720EAEBDABC07AEB4B29B41F14CBDC29D3F2DAD58C7C18EB0F9B6DAAEE6DA1"
+    },
+    {
+      "File": "src/Client/UI/UtilityController.luau",
+      "SHA256": "CDE03652835C511F7FB9F9A536B64E461BEAFC510EFDCB939CE46B8AB0CAE725"
+    },
+    {
+      "File": "src/Services/AnalyticsService.luau",
+      "SHA256": "8A4423AAD3014F0C542B0B20D9550F73E58F1FEB70926F7AEA0C6E3BC6E4A99D"
+    },
+    {
+      "File": "src/Services/AntiExploitService.luau",
+      "SHA256": "EFDF074DF4E4CEC9B9EE7309FC5ADDE3BB3E5974CCD6FDC381B5A207AC1563F1"
+    },
+    {
+      "File": "src/Services/CreatureService.luau",
+      "SHA256": "116F554BA9282A4B18BC72241A9A75CA78C0A3E7679C5F902A61696AFB24BCF9"
+    },
+    {
+      "File": "src/Services/EconomyService.luau",
+      "SHA256": "7093FDEAA259D93C261D00AAAB0B7B18343471C1ABFC250B0D335BF60242CD18"
+    },
+    {
+      "File": "src/Services/EventService.luau",
+      "SHA256": "1962D71F5F0A5B77BE73749E901C7E00F1ECBE48DAD38E01EEF70FA6EA68AFB4"
+    },
+    {
+      "File": "src/Services/InventoryService.luau",
+      "SHA256": "5C2C9A3FC25E081E5FA47E35A04B014F5E2BF957138BF9309D7EDA673980F2B1"
+    },
+    {
+      "File": "src/Services/MonetizationService.luau",
+      "SHA256": "8C1D77703092FCE4203AFCDDA070B0F8139A7A4DF0F887EF00998EE67498F5E2"
+    },
+    {
+      "File": "src/Services/MutationService.luau",
+      "SHA256": "6A1063DF16A71D99A6BB4B4074A2B52799CAA009615041017C5CFE0F4F9AE908"
+    },
+    {
+      "File": "src/Services/PlayerDataService.luau",
+      "SHA256": "B55115967FC0A47D1D867BCDC61415368E4738714E5E96DCEA72205F30DA4654"
+    },
+    {
+      "File": "src/Services/PlotService.luau",
+      "SHA256": "385849484E20BC80BA6B5A1E856BA3BD0E4A7F14159628703F98AC98304F535B"
+    },
+    {
+      "File": "src/Services/QuestService.luau",
+      "SHA256": "034135081E78E808C9D5B60C199AD1AD986D9B2C9FD5C3EBC8D9D3AB9E4153FB"
+    },
+    {
+      "File": "src/Services/ReceiptService.luau",
+      "SHA256": "56AEA7702D050E34AE8DD17D0AEA59CB9E2E94F0CBEE7307C0452E708CCC3349"
+    },
+    {
+      "File": "src/Services/TheftService.luau",
+      "SHA256": "D3D5C4EFCB0B8E812DF021E053052392F44FF168C0E550FD93EF7A115F9D2DA2"
+    },
+    {
+      "File": "src/Shared/CreatureCatalog.luau",
+      "SHA256": "5016B24C7F8D8920260B4549BB97FBDCD0C4A3E55207D8316BD4F46AEE1CB408"
+    },
+    {
+      "File": "src/Shared/CreatureFactory.luau",
+      "SHA256": "25847EC236F24FF1E7C8CB345AAE99549DE299ED9C414EB47265AE2F64188E87"
+    },
+    {
+      "File": "src/Shared/EconomyConfig.luau",
+      "SHA256": "A304FB272B8A526F06F9BCB3CC6D6C87C0015EA8E108CE503E9CED33CC3612B1"
+    },
+    {
+      "File": "src/Shared/GameConfig.luau",
+      "SHA256": "7532A308D9E0318E7A19043833F0554FDECAE4EF385142879F00FD10DE725C22"
+    },
+    {
+      "File": "src/Shared/MutationConfig.luau",
+      "SHA256": "754B1DD298FC45DFB423DC2F31F7B96473B2F8F6D23473B3884BEB07D56115EC"
+    },
+    {
+      "File": "src/Shared/UI/Components.luau",
+      "SHA256": "185ADAB4723323527DD1F113163E536990AB2C43B0D6685145204A23FE9CA179"
+    },
+    {
+      "File": "src/Shared/UI/Icons.luau",
+      "SHA256": "E9EC3D41617742F7ECB13E63B43EF77DF60B597BE2BFCC5819856D88419D8F5F"
+    },
+    {
+      "File": "src/Shared/UI/Theme.luau",
+      "SHA256": "210741F3A5BC780736A6CDC14624F575CA23557937343D36BB2AF67F4771D596"
+    }
+  ],
+  "NativePlaceSaveConfirmed": false
+}

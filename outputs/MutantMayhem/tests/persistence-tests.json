@@ -1,0 +1,1 @@
+{"ReleaseAndReload":true,"ReceiptReplayNoDoubleGrant":true,"LostAcknowledgmentRetry":true,"FinalCoins":1100,"Migration":true,"MockWrites":8,"PreWriteFailureRetry":true,"ConcurrentLockRejected":true,"FutureSchemaRefused":true}

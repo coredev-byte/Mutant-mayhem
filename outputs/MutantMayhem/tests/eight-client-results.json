@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-18",
+  "environment": "Eight actual local Studio clients, unpublished demo profiles",
+  "Result": {
+    "AllClientUIsReady": true,
+    "Clients": 8,
+    "Demo": true,
+    "RemainingClients": 7,
+    "StateRoundTripMaxMs": 2976.4987002126873,
+    "UniqueLabs": 8,
+    "ActualDisconnectCleanup": true,
+    "AllClientsRemotePlaceDailySetting": true,
+    "StateRoundTripMeanMs": 969.4242499535903,
+    "UniqueCreatures": 64
+  },
+  "Success": true,
+  "limitations": [
+    "Not a 12-client or physical mobile performance test.",
+    "64 specimens were filled through server-only QA state after client actions passed.",
+    "Actual disconnect used Player:Kick, not packet loss or a process crash.",
+    "AllClientUIsReady is the harness's UI-wait stage, not eight visual inspections."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "MutantMayhem",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "MM": {
+        "$className": "Folder",
+        "Shared": {"$path": "src/Shared"},
+        "Remotes": {
+          "$className": "Folder",
+          "Action": {"$className": "RemoteFunction"},
+          "Update": {"$className": "RemoteEvent"}
+        }
+      }
+    },
+    "ServerScriptService": {
+      "MM": {
+        "$className": "Folder",
+        "Services": {"$path": "src/Services"},
+        "Bootstrap": {"$path": "src/Bootstrap.server.luau"},
+        "MapBuilder": {"$path": "src/MapBuilder.luau"}
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {"MM": {"$path": "src/Client"}}
+    },
+    "Workspace": {"$properties": {"StreamingEnabled": true}}
+  }
+}

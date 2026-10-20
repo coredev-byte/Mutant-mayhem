@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-18",
+  "environment": "Roblox Studio Edit, actual PlayerDataService source with isolated memory-only UpdateAsync fault adapter",
+  "PreWriteFailureRetry": true,
+  "LostAcknowledgmentRetry": true,
+  "ReceiptReplayNoDoubleGrant": true,
+  "ConcurrentLockRejected": true,
+  "ReleaseAndReload": true,
+  "Migration": true,
+  "FutureSchemaRefused": true,
+  "CorruptProfilesRefused": 9,
+  "DepartureRetainedAndRecovered": true,
+  "StaleAcknowledgmentAfterTakeoverRejected": true,
+  "PendingReceiptReleased": true,
+  "ExactDescriptorRoundTrip": true,
+  "ExpiredLeaseColdRecovery": true,
+  "RevisionConflictRejected": true,
+  "FinalCoins": 2234,
+  "MockWrites": 20,
+  "RealRobloxBackendVerified": false
+}

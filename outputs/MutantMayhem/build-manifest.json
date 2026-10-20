@@ -1,0 +1,103 @@
+{
+  "Saved": "2026-10-18T20:21:30.3574230-03:00",
+  "Validation": [
+    "Expanded mock persistence faults passed",
+    "Eight-client correctness passed",
+    "Keyboard UI navigation and activation passed",
+    "Native controller and published persistence pending"
+  ],
+  "Build": 2,
+  "SourceHashes": [
+    {
+      "File": "src/Bootstrap.server.luau",
+      "SHA256": "8473EEEC25A63AE8952765FE8EAFF63B53DEDB4A7406591BF95D99CEF4742451"
+    },
+    {
+      "File": "src/MapBuilder.luau",
+      "SHA256": "85BED8DE259D5AD888E10E3BCED58DD13D75A4E81668AD56E60A09AA75B861D9"
+    },
+    {
+      "File": "src/Client/Animation.client.luau",
+      "SHA256": "6B2718DDC94BB77A2B5F31376BC58B370E111843F238E11A80F6CD3072A4489B"
+    },
+    {
+      "File": "src/Client/Main.client.luau",
+      "SHA256": "984590F10666A63B0FFACB3C0C249ED8F999AA4A315739086584E0D19B138144"
+    },
+    {
+      "File": "src/Services/AnalyticsService.luau",
+      "SHA256": "8A4423AAD3014F0C542B0B20D9550F73E58F1FEB70926F7AEA0C6E3BC6E4A99D"
+    },
+    {
+      "File": "src/Services/AntiExploitService.luau",
+      "SHA256": "EFDF074DF4E4CEC9B9EE7309FC5ADDE3BB3E5974CCD6FDC381B5A207AC1563F1"
+    },
+    {
+      "File": "src/Services/CreatureService.luau",
+      "SHA256": "116F554BA9282A4B18BC72241A9A75CA78C0A3E7679C5F902A61696AFB24BCF9"
+    },
+    {
+      "File": "src/Services/EconomyService.luau",
+      "SHA256": "7093FDEAA259D93C261D00AAAB0B7B18343471C1ABFC250B0D335BF60242CD18"
+    },
+    {
+      "File": "src/Services/EventService.luau",
+      "SHA256": "1962D71F5F0A5B77BE73749E901C7E00F1ECBE48DAD38E01EEF70FA6EA68AFB4"
+    },
+    {
+      "File": "src/Services/InventoryService.luau",
+      "SHA256": "5C2C9A3FC25E081E5FA47E35A04B014F5E2BF957138BF9309D7EDA673980F2B1"
+    },
+    {
+      "File": "src/Services/MonetizationService.luau",
+      "SHA256": "8C1D77703092FCE4203AFCDDA070B0F8139A7A4DF0F887EF00998EE67498F5E2"
+    },
+    {
+      "File": "src/Services/MutationService.luau",
+      "SHA256": "864FF83C94219A8D19A1E36B3798379F5C0F8E20A0954285E8E6D47A1D317293"
+    },
+    {
+      "File": "src/Services/PlayerDataService.luau",
+      "SHA256": "9EB04468DE0AD2D6A9134F7B8FADE2B49249BC881E914A2A8B2E612AA7DD4B4F"
+    },
+    {
+      "File": "src/Services/PlotService.luau",
+      "SHA256": "385849484E20BC80BA6B5A1E856BA3BD0E4A7F14159628703F98AC98304F535B"
+    },
+    {
+      "File": "src/Services/QuestService.luau",
+      "SHA256": "034135081E78E808C9D5B60C199AD1AD986D9B2C9FD5C3EBC8D9D3AB9E4153FB"
+    },
+    {
+      "File": "src/Services/ReceiptService.luau",
+      "SHA256": "56AEA7702D050E34AE8DD17D0AEA59CB9E2E94F0CBEE7307C0452E708CCC3349"
+    },
+    {
+      "File": "src/Services/TheftService.luau",
+      "SHA256": "D3D5C4EFCB0B8E812DF021E053052392F44FF168C0E550FD93EF7A115F9D2DA2"
+    },
+    {
+      "File": "src/Shared/CreatureCatalog.luau",
+      "SHA256": "5016B24C7F8D8920260B4549BB97FBDCD0C4A3E55207D8316BD4F46AEE1CB408"
+    },
+    {
+      "File": "src/Shared/CreatureFactory.luau",
+      "SHA256": "25847EC236F24FF1E7C8CB345AAE99549DE299ED9C414EB47265AE2F64188E87"
+    },
+    {
+      "File": "src/Shared/EconomyConfig.luau",
+      "SHA256": "A304FB272B8A526F06F9BCB3CC6D6C87C0015EA8E108CE503E9CED33CC3612B1"
+    },
+    {
+      "File": "src/Shared/GameConfig.luau",
+      "SHA256": "7532A308D9E0318E7A19043833F0554FDECAE4EF385142879F00FD10DE725C22"
+    },
+    {
+      "File": "src/Shared/MutationConfig.luau",
+      "SHA256": "754B1DD298FC45DFB423DC2F31F7B96473B2F8F6D23473B3884BEB07D56115EC"
+    }
+  ],
+  "File": "MutantMayhem.rbxl",
+  "Bytes": 161156,
+  "SHA256": "0C0555EE048EEAD018D23DA739945A614DDAB440BFD7C42B3D8768042FDEA6DB"
+}

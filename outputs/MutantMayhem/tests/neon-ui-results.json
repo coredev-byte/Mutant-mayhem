@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-19",
+  "placeId": 129621048489588,
+  "screenSmoke": {
+    "Map": {
+      "Ok": true
+    },
+    "FirstPage24": true,
+    "Missions": {
+      "Ok": true
+    },
+    "Details": {
+      "Ok": true
+    },
+    "Event": {
+      "Ok": true
+    },
+    "EmptyState": true,
+    "Lab": {
+      "Ok": true
+    },
+    "Shop": {
+      "Ok": true
+    },
+    "Settings": {
+      "Ok": true
+    },
+    "SearchFive": true,
+    "Care": {
+      "Ok": true
+    },
+    "Mutation": {
+      "Ok": true
+    },
+    "Pets": {
+      "Ok": true
+    },
+    "Social": {
+      "Ok": true
+    }
+  },
+  "responsive": {
+    "portrait": {
+      "Viewport": "388, 762",
+      "Screens": {
+        "Map": {
+          "Ok": true
+        },
+        "Missions": {
+          "Ok": true
+        },
+        "Details": {
+          "Ok": true
+        },
+        "Event": {
+          "Ok": true
+        },
+        "Lab": {
+          "Ok": true
+        },
+        "Shop": {
+          "Ok": true
+        },
+        "Settings": {
+          "Ok": true
+        },
+        "Care": {
+          "Ok": true
+        },
+        "Mutation": {
+          "Ok": true
+        },
+        "Pets": {
+          "Ok": true
+        },
+        "Social": {
+          "Ok": true
+        }
+      }
+    },
+    "landscape": {
+      "Viewport": "749, 388",
+      "Screens": {
+        "Map": {
+          "Ok": true
+        },
+        "Missions": {
+          "Ok": true
+        },
+        "Details": {
+          "Ok": true
+        },
+        "Event": {
+          "Ok": true
+        },
+        "Lab": {
+          "Ok": true
+        },
+        "Shop": {
+          "Ok": true
+        },
+        "Settings": {
+          "Ok": true
+        },
+        "Care": {
+          "Ok": true
+        },
+        "Mutation": {
+          "Ok": true
+        },
+        "Pets": {
+          "Ok": true
+        },
+        "Social": {
+          "Ok": true
+        }
+      }
+    },
+    "tablet": {
+      "Viewport": "1179, 819",
+      "Screens": {
+        "Map": {
+          "Ok": true
+        },
+        "Missions": {
+          "Ok": true
+        },
+        "Details": {
+          "Ok": true
+        },
+        "Event": {
+          "Ok": true
+        },
+        "Lab": {
+          "Ok": true
+        },
+        "Shop": {
+          "Ok": true
+        },
+        "Settings": {
+          "Ok": true
+        },
+        "Care": {
+          "Ok": true
+        },
+        "Mutation": {
+          "Ok": true
+        },
+        "Pets": {
+          "Ok": true
+        },
+        "Social": {
+          "Ok": true
+        }
+      }
+    },
+    "desktop": {
+      "Viewport": "1919, 1079",
+      "Screens": {
+        "Map": {
+          "Ok": true
+        },
+        "Missions": {
+          "Ok": true
+        },
+        "Details": {
+          "Ok": true
+        },
+        "Event": {
+          "Ok": true
+        },
+        "Lab": {
+          "Ok": true
+        },
+        "Shop": {
+          "Ok": true
+        },
+        "Settings": {
+          "Ok": true
+        },
+        "Care": {
+          "Ok": true
+        },
+        "Mutation": {
+          "Ok": true
+        },
+        "Pets": {
+          "Ok": true
+        },
+        "Social": {
+          "Ok": true
+        }
+      }
+    }
+  },
+  "integration": {
+    "Favorite": true,
+    "InvalidOwnerRejected": true,
+    "InvalidFlagRejected": true,
+    "Lock": true,
+    "LockedMutationRejectedWithoutCharge": true,
+    "MutationCharged75": true,
+    "Place": true,
+    "Daily": true,
+    "DuplicateDailyRejected": true,
+    "Upgrade": true,
+    "Setting": true,
+    "Discover": true,
+    "MouseConfirmation": true,
+    "More48Cards": true,
+    "FavoriteFilter20Cards": true,
+    "RespawnOneRoot": true
+  },
+  "persistence": {
+    "MockWrites": 20,
+    "ConcurrentLockRejected": true,
+    "RevisionConflictRejected": true,
+    "ReceiptReplayNoDoubleGrant": true,
+    "LostAcknowledgmentRetry": true,
+    "FinalCoins": 2234,
+    "ExpiredLeaseColdRecovery": true,
+    "DepartureRetainedAndRecovered": true,
+    "Migration": true,
+    "ExactDescriptorRoundTrip": true,
+    "PendingReceiptReleased": true,
+    "ReleaseAndReload": true,
+    "PreWriteFailureRetry": true,
+    "StaleAcknowledgmentAfterTakeoverRejected": true,
+    "CorruptProfilesRefused": 11,
+    "FutureSchemaRefused": true
+  },
+  "limitations": [
+    "DataStore tests use isolated in-memory mocks; published persistence not verified.",
+    "Gamepad bindings checked via injected keys; physical controller not verified.",
+    "60 pets were transient Studio demo fixtures, removed when Play stopped.",
+    "Responsive numerical bounds checks do not certify every possible device.",
+    "Unrelated MM_TrioAssets.TrioBuilder reports EditableMesh API disabled.",
+    "Native place save remains unconfirmed. Source files are saved."
+  ]
+}

@@ -1,0 +1,1 @@
+[MM_MULTIPLAYER_RESULT] true {"Result":{"DisconnectCleanup":true,"DistinctPlots":true,"Clients":2,"PlotCount":12,"Demo":true,"Income":true,"StarterEach":true,"RaidStarted":true,"DefenseCanceled":true,"CrossPlayerOwnershipRejected":true,"DNAUniqueAndOriginalRetained":true},"Success":true}
