@@ -18,6 +18,7 @@ function P.Release(player)
 		local badge=p:FindFirstChild("WeeklyBadge") if badge then badge:Destroy() end
 		WorldRemaster.ResetPlot(p)
 		p.Canopy.Color=Color3.fromRGB(241,143,122)
+		WorldRemaster.RefreshStyle(p)
 		p.Sign.BillboardGui.TextLabel.Text="LAB "..string.format("%02d",p:GetAttribute("PlotId")) end
 	P.Assigned[player]=nil
 end

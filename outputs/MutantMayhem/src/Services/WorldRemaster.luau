@@ -107,6 +107,7 @@ function R.Apply(world)
   local f=plot:FindFirstChild("VisualRemaster")
   if f and not owned(f) then return false,"VisualRemaster name belongs to another system" end
  end
+ if existing and world:GetAttribute("MMRemasterVersion")==VERSION then return true end
  local staged=folder("MM_Remaster",nil)
  local ok,err=pcall(function()
   for _,item in Recipe.world do make(item,CFrame.new(),staged) end

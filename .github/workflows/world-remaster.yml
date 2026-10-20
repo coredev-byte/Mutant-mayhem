@@ -24,7 +24,7 @@ jobs:
       - name: Install cloud Blender
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends blender
+          sudo apt-get install -y --no-install-recommends blender python3-numpy
           mkdir -p remaster/build
           blender --background --factory-startup --python-expr "import bpy,json,pathlib; pathlib.Path('remaster/build/capabilities.json').write_text(json.dumps({'blender':bpy.app.version_string,'host':'github-hosted ubuntu-24.04','studio_available':False})); print('CLOUD_BLENDER_READY',bpy.app.version_string)"
       - name: Install pinned Luau CLI
