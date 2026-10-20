@@ -1978,50 +1978,6 @@
       "bevel": 0.12
     },
     {
-      "name": "LAB_HologramStand",
-      "size": [
-        4,
-        0.55,
-        1.3
-      ],
-      "pos": [
-        0,
-        1.25,
-        12.1
-      ],
-      "material": "navy",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
-      "name": "LAB_HologramPanel",
-      "size": [
-        3,
-        2.8,
-        0.18
-      ],
-      "pos": [
-        0,
-        4.1,
-        12.5
-      ],
-      "material": "cyan",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
       "name": "LAB_Roof_Crest",
       "size": [
         6,
@@ -2124,6 +2080,138 @@
       "material": "stone",
       "minTier": 3,
       "shape": "box",
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_Base",
+      "size": [
+        3.4,
+        0.45,
+        2
+      ],
+      "pos": [
+        0,
+        1.4,
+        12
+      ],
+      "material": "navy",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_Chamber",
+      "size": [
+        2.5,
+        3.7,
+        1.2
+      ],
+      "pos": [
+        0,
+        3.5,
+        12
+      ],
+      "material": "glass",
+      "shape": "cylinder",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_Lid",
+      "size": [
+        3,
+        0.45,
+        1.8
+      ],
+      "pos": [
+        0,
+        5.6,
+        12
+      ],
+      "material": "shell",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_Core",
+      "size": [
+        0.8,
+        1.3,
+        0.8
+      ],
+      "pos": [
+        0,
+        3.4,
+        12
+      ],
+      "material": "violet",
+      "shape": "sphere",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_ConduitL",
+      "size": [
+        0.22,
+        3.7,
+        0.22
+      ],
+      "pos": [
+        -1.5,
+        3.5,
+        12
+      ],
+      "material": "cyan",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.12
+    },
+    {
+      "name": "LAB_Incubator_ConduitR",
+      "size": [
+        0.22,
+        3.7,
+        0.22
+      ],
+      "pos": [
+        1.5,
+        3.5,
+        12
+      ],
+      "material": "cyan",
+      "shape": "box",
+      "minTier": 1,
       "rot": [
         0,
         0,

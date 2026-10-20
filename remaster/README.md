@@ -4,7 +4,7 @@ Development branch: `feature/world-remaster`. Main snapshot:
 `13b53c1d4987dc2f694e83cde01f9433fe28b855`.
 
 ## What is implemented
-- A 94-component modular laboratory kit with five cumulative architectural stages.
+- A 98-component modular laboratory kit with five cumulative architectural stages.
 - Existing backend levels 0–6 map to visual tiers 1, 2, 2, 3, 4, 4, 5. Costs and unlock rules are unchanged.
 - A 299-component world overlay: reactor buttresses/crown, plaza edges/seating, planted discovery beds, social backdrop, event framing, shop canopy and labelled future-region foundations.
 - Reversible server integration for all 12 existing plot transforms. Existing pads, terminals, signs, ownership, collisions and teleports remain the gameplay authority.

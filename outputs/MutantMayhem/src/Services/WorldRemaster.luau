@@ -94,7 +94,7 @@ function R.Rollback(world)
  world:SetAttribute("MMRemasterVersion",nil)
 end
 function R.Apply(world)
- if world:GetAttribute("MMRemasterDisabled") then return false,"Disabled by world attribute" end
+ if world:GetAttribute("MMRemasterDisabled") then R.Rollback(world) return false,"Disabled by world attribute" end
  local plots=world:FindFirstChild("Plots")
  if not plots or #plots:GetChildren()~=12 then return false,"Expected 12 existing plots" end
  local existing=world:FindFirstChild("MM_Remaster")

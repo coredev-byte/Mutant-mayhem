@@ -96,8 +96,8 @@ for i in range(12):
 # Avatar clearance silhouette, labelled as reference rather than an exported character.
 ref("Avatar_Clearance",[2,5,1.2],[0,3.5,-11],"metal")
 scene=bpy.context.scene
-scene.render.engine="CYCLES"; scene.cycles.device="CPU"; scene.cycles.samples=20
-scene.cycles.use_denoising=True
+scene.render.engine="CYCLES"; scene.cycles.device="CPU"; scene.cycles.samples=32
+scene.cycles.use_denoising=False  # Ubuntu build lacks OpenImageDenoiser; CPU path tracing remains supported.
 scene.render.resolution_x=800; scene.render.resolution_y=600; scene.render.resolution_percentage=100
 scene.world.use_nodes=True
 scene.world.node_tree.nodes["Background"].inputs[0].default_value=(.32,.47,.65,1)
