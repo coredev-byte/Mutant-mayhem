@@ -79,12 +79,12 @@ end
 function C.Button(parent,text,callback,color)
  local b=C.New("TextButton",parent,{Name=text,Text=text,Font=Enum.Font.GothamBold,TextSize=15,TextColor3=T.Text,BackgroundColor3=color or T.Card,BorderSizePixel=0,Size=UDim2.new(1,0,0,46),AutoButtonColor=false,Selectable=true,TextWrapped=true})
  if #text>35 then b:SetAttribute("Tooltip",text) end
- C.Corner(b,10) local border=C.Stroke(b,color or T.Cyan,1.5)
- C.New("UIGradient",b,{Color=ColorSequence.new(Color3.new(1,1,1),Color3.fromRGB(165,180,205)),Rotation=90})
+ C.Corner(b,10) local border=C.Stroke(b,Color3.fromRGB(102,135,161),1)
+
  local activeTween
  local function glow(on)
   if activeTween then activeTween:Cancel() end
-  if T.ReducedMotion then border.Transparency=on and 0 or .35 else activeTween=Tween:Create(border,TweenInfo.new(.12),{Transparency=on and 0 or .35,Thickness=on and 2.5 or 1.5}) activeTween:Play() end
+  if T.ReducedMotion then border.Transparency=on and .05 or .65 else activeTween=Tween:Create(border,TweenInfo.new(.12),{Transparency=on and .05 or .65,Thickness=on and 2 or 1}) activeTween:Play() end
  end
  b.MouseEnter:Connect(function() glow(true) end) b.MouseLeave:Connect(function() glow(false) end)
  b.SelectionGained:Connect(function() glow(true) end) b.SelectionLost:Connect(function() glow(false) end)
@@ -137,7 +137,7 @@ function C.Preview(parent,pet)
 end
 function C.PetCard(parent,pet,name,callback,selected)
  local rarity=pet.Mutation and pet.Mutation.Rarity or 1
- local b=C.Button(parent,"",callback,T.Card) b.Name="Pet_"..pet.Id C.Stroke(b,selected and T.Text or T.Rarity[rarity],selected and 3 or 1.5)
+ local b=C.Button(parent,"",callback,T.Card) b.Name="Pet_"..pet.Id C.Stroke(b,selected and T.Cyan or T.Rarity[rarity],selected and 2 or 1)
  local v=C.Preview(b,pet) v.Size=UDim2.new(1,0,1,-42)
  local title=C.Title(b,name,14) title.Position=UDim2.new(0,4,1,-44) title.Size=UDim2.new(1,-8,0,23) title.TextXAlignment=Enum.TextXAlignment.Center
  local r=C.Label(b,T.RarityNames[rarity],11,T.Rarity[rarity]) r.Position=UDim2.new(0,4,1,-23) r.Size=UDim2.new(1,-8,0,20) r.TextXAlignment=Enum.TextXAlignment.Center
