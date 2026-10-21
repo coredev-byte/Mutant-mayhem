@@ -6,7 +6,7 @@ function U.Build(app,host)
   for _,setting in {{"Peaceful","Modo pacífico"},{"ReducedMotion","Reduzir movimento"},{"LowGraphics","Gráficos leves"}} do
    binds[setting[1]]=C.Button(scroll,setting[2],function() app:Send("Setting",setting[1]) end) binds[setting[1]]:SetAttribute("Label",setting[2])
   end
-  C.Section(scroll,"CONTROLES","M / Y: laboratório. B / Esc: voltar. LB / RB: mudar tela. Direcional: navegar. A: selecionar. Touch: toque e deslize as listas.",T.Cyan,140)
+  C.Section(scroll,"CONTROLES","M / Y: menu. B / Esc: voltar. LB / RB: mudar tela dentro dos menus. Direcional: navegar. A: selecionar. Touch: toque e deslize as listas.",T.Cyan,140)
   C.Section(scroll,"DADOS","No Studio com modo de teste, o progresso é temporário. Nos servidores públicos, o jogo usa o sistema de persistência.",T.Gold,120)
  elseif app.Page=="Event" then
   eventLabel=C.Section(scroll,"FESTIVAL DE MUTAÇÃO","",T.Pink,150)

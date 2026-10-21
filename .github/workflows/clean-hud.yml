@@ -1,0 +1,31 @@
+name: Clean HUD validation
+on:
+  push:
+    branches: [feature/clean-hud]
+    paths:
+      - "outputs/MutantMayhem/src/**"
+      - "ui-clean/**"
+      - ".github/workflows/clean-hud.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install verified Luau CLI
+        run: |
+          curl -fLsS https://github.com/luau-lang/luau/releases/download/0.743/luau-ubuntu.zip -o /tmp/luau.zip
+          echo "99d45afb4afaee00ba631c526c8e8c76c67b60f6f119953ce6409be6d6953663  /tmp/luau.zip" | sha256sum -c -
+          mkdir -p /tmp/luau
+          unzip -q /tmp/luau.zip -d /tmp/luau
+          chmod +x /tmp/luau/luau*
+      - name: Compile all game sources
+        run: |
+          find outputs/MutantMayhem/src -name '*.luau' -print0 | while IFS= read -r -d '' path; do /tmp/luau/luau-compile "$path" > /dev/null; done
+      - name: Test HUD layout and state transitions
+        run: /tmp/luau/luau ui-clean/tests/layout.luau
