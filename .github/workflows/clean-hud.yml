@@ -29,3 +29,18 @@ jobs:
           find outputs/MutantMayhem/src -name '*.luau' -print0 | while IFS= read -r -d '' path; do /tmp/luau/luau-compile "$path" > /dev/null; done
       - name: Test HUD layout and state transitions
         run: /tmp/luau/luau ui-clean/tests/layout.luau
+      - name: Exercise actual HUD and controller callbacks
+        run: |
+          python3 ui-clean/tests/build_hud_harness.py
+          /tmp/luau/luau /tmp/clean-hud-harness.luau > /tmp/hud-test-output.txt
+          grep -v "^UI_PREVIEW_" /tmp/hud-test-output.txt
+      - name: Render layout illustrations
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends python3-cairosvg
+          /usr/bin/python3 ui-clean/tests/render_previews.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: clean-hud-layout-previews
+          path: ui-clean/build/
+          retention-days: 90
