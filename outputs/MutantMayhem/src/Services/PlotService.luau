@@ -1,4 +1,5 @@
 local P={Assigned={}}
+local WorldRemaster=require(script.Parent.WorldRemaster)
 function P.Assign(player)
 	for _,plot in workspace.MM_World.Plots:GetChildren() do
 		if plot:GetAttribute("OwnerId")==0 then plot:SetAttribute("OwnerId",player.UserId) plot:SetAttribute("OwnerName",player.DisplayName) P.Assigned[player]=plot
@@ -15,7 +16,9 @@ function P.Release(player)
 	local p=P.Assigned[player] if p then p:SetAttribute("OwnerId",0) p:SetAttribute("OwnerName",nil)
 		local pets=p:FindFirstChild("Creatures") if pets then pets:Destroy() end
 		local badge=p:FindFirstChild("WeeklyBadge") if badge then badge:Destroy() end
+		WorldRemaster.ResetPlot(p)
 		p.Canopy.Color=Color3.fromRGB(241,143,122)
+		WorldRemaster.RefreshStyle(p)
 		p.Sign.BillboardGui.TextLabel.Text="LAB "..string.format("%02d",p:GetAttribute("PlotId")) end
 	P.Assigned[player]=nil
 end

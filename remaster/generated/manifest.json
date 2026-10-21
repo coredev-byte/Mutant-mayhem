@@ -1,0 +1,301 @@
+{
+  "source_commit": "3c7a1f4b289b8398df5951ff20ef4faffb023860",
+  "blender": "4.0.2",
+  "source": "remaster/design/environment.json",
+  "assets": [
+    {
+      "name": "LAB_Tier_1",
+      "objects": 64,
+      "triangles": 14116,
+      "boundsRoblox": {
+        "min": [
+          -18.599998474121094,
+          -1.0,
+          -15.0
+        ],
+        "max": [
+          18.599998474121094,
+          10.875,
+          14.199999809265137
+        ],
+        "size": [
+          37.19999694824219,
+          11.875,
+          29.199999809265137
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "LAB_Tier_1.glb",
+        "LAB_Tier_1.fbx"
+      ]
+    },
+    {
+      "name": "LAB_Tier_2",
+      "objects": 74,
+      "triangles": 16500,
+      "boundsRoblox": {
+        "min": [
+          -18.599998474121094,
+          -1.0,
+          -15.0
+        ],
+        "max": [
+          18.599998474121094,
+          11.22499942779541,
+          14.199999809265137
+        ],
+        "size": [
+          37.19999694824219,
+          12.22499942779541,
+          29.199999809265137
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "LAB_Tier_2.glb",
+        "LAB_Tier_2.fbx"
+      ]
+    },
+    {
+      "name": "LAB_Tier_3",
+      "objects": 86,
+      "triangles": 19396,
+      "boundsRoblox": {
+        "min": [
+          -20.889999389648438,
+          -1.0,
+          -15.0
+        ],
+        "max": [
+          20.889999389648438,
+          11.22499942779541,
+          14.199999809265137
+        ],
+        "size": [
+          41.779998779296875,
+          12.22499942779541,
+          29.199999809265137
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "LAB_Tier_3.glb",
+        "LAB_Tier_3.fbx"
+      ]
+    },
+    {
+      "name": "LAB_Tier_4",
+      "objects": 92,
+      "triangles": 21804,
+      "boundsRoblox": {
+        "min": [
+          -20.889999389648438,
+          -1.0,
+          -15.0
+        ],
+        "max": [
+          20.889999389648438,
+          13.524999618530273,
+          14.199999809265137
+        ],
+        "size": [
+          41.779998779296875,
+          14.524999618530273,
+          29.199999809265137
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "LAB_Tier_4.glb",
+        "LAB_Tier_4.fbx"
+      ]
+    },
+    {
+      "name": "LAB_Tier_5",
+      "objects": 97,
+      "triangles": 22996,
+      "boundsRoblox": {
+        "min": [
+          -20.889999389648438,
+          -1.0,
+          -15.0
+        ],
+        "max": [
+          20.889999389648438,
+          15.23387622833252,
+          14.199999809265137
+        ],
+        "size": [
+          41.779998779296875,
+          16.23387622833252,
+          29.199999809265137
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "LAB_Tier_5.glb",
+        "LAB_Tier_5.fbx"
+      ]
+    },
+    {
+      "name": "WORLD_Overlay",
+      "objects": 299,
+      "triangles": 91744,
+      "boundsRoblox": {
+        "min": [
+          -190.62510681152344,
+          4.0,
+          -189.5
+        ],
+        "max": [
+          192.5,
+          23.125,
+          183.5
+        ],
+        "size": [
+          383.12510681152344,
+          19.125,
+          373.0
+        ]
+      },
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "scale": "1 unit = 1 Roblox stud; verify import bounds",
+      "files": [
+        "WORLD_Overlay.glb",
+        "WORLD_Overlay.fbx"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "name": "LAB_Tier_1.fbx",
+      "bytes": 252556,
+      "sha256": "cf5566e045b4c45ba69a918546b3b4c88086f17fc9ef5bfd92db3b616ef8b4cd"
+    },
+    {
+      "name": "LAB_Tier_1.glb",
+      "bytes": 196776,
+      "sha256": "4a61f07ed58c12f44899938f3c1c0c555e9fc173f1b108be0941a6692b0dfa20"
+    },
+    {
+      "name": "LAB_Tier_1_entrance.png",
+      "bytes": 750614,
+      "sha256": "e3ed0f47df1106b9bf91c8953882502f6a90e9017e1278ca99d8d6895c767009"
+    },
+    {
+      "name": "LAB_Tier_1_interior.png",
+      "bytes": 904506,
+      "sha256": "64970424817b7e51339311ede2fa70c2d970c0a8afa6a09066e832eb2597ff19"
+    },
+    {
+      "name": "LAB_Tier_2.fbx",
+      "bytes": 299916,
+      "sha256": "016b0520163fcd36857df58e06ee77f3c31542f51095c9df7910555bf83162fa"
+    },
+    {
+      "name": "LAB_Tier_2.glb",
+      "bytes": 237264,
+      "sha256": "ca17640df22d65325f39118b7a5d04e0144044c8a6bbca221acd9b5f3290c388"
+    },
+    {
+      "name": "LAB_Tier_2_entrance.png",
+      "bytes": 756855,
+      "sha256": "8bd5ed8d8522759457e5184fcc02cedb61ee13f197c97763a3043f78f73f82db"
+    },
+    {
+      "name": "LAB_Tier_3.fbx",
+      "bytes": 351436,
+      "sha256": "0d9508afd956b9730ba1a40b2fac9712e60894c8bf2e52444ee6978c55d9c01d"
+    },
+    {
+      "name": "LAB_Tier_3.glb",
+      "bytes": 281860,
+      "sha256": "76724123b5fa39df391c40c7317e9955b562e718cdb96d41c981bf48a58e686e"
+    },
+    {
+      "name": "LAB_Tier_3_entrance.png",
+      "bytes": 781334,
+      "sha256": "7abc9a66eec401dcb26cce622bf8ff7a0bc69a583c8fd7006649dd0bc08926e6"
+    },
+    {
+      "name": "LAB_Tier_4.fbx",
+      "bytes": 387468,
+      "sha256": "f19758e7f04659e87aa28c235ec6e96e537784d9009fef2358c4e3bcc1656d1f"
+    },
+    {
+      "name": "LAB_Tier_4.glb",
+      "bytes": 325392,
+      "sha256": "28a5b915e676d070c19f402396dd6bec2f238815efd9e118b6bafd0edb2127c7"
+    },
+    {
+      "name": "LAB_Tier_4_entrance.png",
+      "bytes": 793587,
+      "sha256": "30912e181aa8783d7482376c76a385838505298c1fd0594dde0358911165b127"
+    },
+    {
+      "name": "LAB_Tier_5.fbx",
+      "bytes": 415404,
+      "sha256": "8dca308e06976bd34629829ba9d3da47e76d7d72de3d7bb518f07c9ec3744472"
+    },
+    {
+      "name": "LAB_Tier_5.glb",
+      "bytes": 348540,
+      "sha256": "5ee0e7522e2a83613696c0d1f6de17ee40a6472bfd7e424df29ebaaaef90762a"
+    },
+    {
+      "name": "LAB_Tier_5_entrance.png",
+      "bytes": 808244,
+      "sha256": "06e397f19b506f9f380a83611001cbfab952f493bb40b38c463ae4bef586fcfe"
+    },
+    {
+      "name": "MutantMayhem_Environment.blend",
+      "bytes": 4572540,
+      "sha256": "ca7604e87019d9ffa94c82f51f92a7cac70580eeeebe121c256d871b30c9e984"
+    },
+    {
+      "name": "WORLD_Overlay.fbx",
+      "bytes": 475884,
+      "sha256": "c3385cd1d79b8e7aa859fb90b37363293585a9110f3b41e73f8f874bddb6a5ce"
+    },
+    {
+      "name": "WORLD_Overlay.glb",
+      "bytes": 318772,
+      "sha256": "b6fcb6e7c8342df4036c1f0040fb5a2160acf1500f83b2d9d6f42d5d00929109"
+    },
+    {
+      "name": "capabilities.json",
+      "bytes": 85,
+      "sha256": "506f2553ff9654e1bf7e9325594850644630c45d6497f4c8fa03fa3e8a5f5452"
+    }
+  ]
+}
