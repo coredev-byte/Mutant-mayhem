@@ -12,6 +12,7 @@ class Exports(unittest.TestCase):
  def test_exports(self):
   self.assertEqual(len(M["assets"]),6)
   for asset in M["assets"]:
+   self.assertTrue(all(v>0 and math.isfinite(v) for v in asset["boundsRoblox"]["size"]))
    data=(OUT/(asset["name"]+".glb")).read_bytes()
    magic,version,length=struct.unpack_from("<4sII",data)
    self.assertEqual((magic,version,length),(b"glTF",2,len(data)))

@@ -24,7 +24,11 @@ local function make(item,origin,parent)
  p.Transparency=item.material=="glass" and .65 or 0
  p.CastShadow=not glow and item.material~="glass" and math.min(size.X,size.Y,size.Z)>.4
  p:SetAttribute("RemasterOwner",OWNER)
- p.Parent=parent return p
+ p.Parent=parent
+ if item.name:find("Flower",1,true) or item.name:find("Leaf",1,true) or item.name:find("Garden_Stone",1,true) then
+  game:GetService("CollectionService"):AddTag(p,"MMRemasterDetail")
+ end
+ return p
 end
 local hideNames={BackWall=true,Pillar=true,RoofFin=true,Canopy=true}
 local function hideOriginal(plot)

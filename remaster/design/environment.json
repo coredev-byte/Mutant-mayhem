@@ -680,50 +680,6 @@
       "bevel": 0.12
     },
     {
-      "name": "LAB_Entrance_SignWing_L",
-      "size": [
-        6,
-        0.7,
-        1.2
-      ],
-      "pos": [
-        -10,
-        9.1,
-        -11
-      ],
-      "material": "shell",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
-      "name": "LAB_Entrance_SignGlow_L",
-      "size": [
-        5.5,
-        0.15,
-        0.16
-      ],
-      "pos": [
-        -10,
-        9,
-        -11.66
-      ],
-      "material": "cyan",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
       "name": "LAB_Equipment_Cabinet_L",
       "size": [
         2.4,
@@ -1604,50 +1560,6 @@
       "bevel": 0.12
     },
     {
-      "name": "LAB_Entrance_SignWing_R",
-      "size": [
-        6,
-        0.7,
-        1.2
-      ],
-      "pos": [
-        10,
-        9.1,
-        -11
-      ],
-      "material": "shell",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
-      "name": "LAB_Entrance_SignGlow_R",
-      "size": [
-        5.5,
-        0.15,
-        0.16
-      ],
-      "pos": [
-        10,
-        9,
-        -11.66
-      ],
-      "material": "cyan",
-      "minTier": 1,
-      "shape": "box",
-      "rot": [
-        0,
-        0,
-        0
-      ],
-      "bevel": 0.12
-    },
-    {
       "name": "LAB_Equipment_Cabinet_R",
       "size": [
         2.4,
@@ -2218,6 +2130,72 @@
         0
       ],
       "bevel": 0.12
+    },
+    {
+      "name": "LAB_Entrance_Header",
+      "size": [
+        29.8,
+        0.85,
+        2.1
+      ],
+      "pos": [
+        0,
+        9.65,
+        -10.5
+      ],
+      "material": "navy",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.16
+    },
+    {
+      "name": "LAB_Entrance_HeaderCap",
+      "size": [
+        30.4,
+        0.35,
+        2.7
+      ],
+      "pos": [
+        0,
+        10.25,
+        -10.5
+      ],
+      "material": "shell",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.16
+    },
+    {
+      "name": "LAB_Entrance_HeaderTrim",
+      "size": [
+        28.5,
+        0.16,
+        0.18
+      ],
+      "pos": [
+        0,
+        9.65,
+        -11.68
+      ],
+      "material": "cyan",
+      "shape": "box",
+      "minTier": 1,
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "bevel": 0.16
     }
   ],
   "visualTierByBackend": [

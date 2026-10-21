@@ -5,7 +5,10 @@ on:
     paths:
       - "outputs/MutantMayhem/src/**"
       - "outputs/MutantMayhem/default.project.json"
-      - "remaster/**"
+      - "remaster/design/**"
+      - "remaster/blender/**"
+      - "remaster/tests/**"
+      - "remaster/tools/**"
       - ".github/workflows/world-remaster.yml"
   workflow_dispatch:
 permissions:
@@ -15,6 +18,8 @@ concurrency:
   cancel-in-progress: true
 jobs:
   validate-and-build:
+    permissions:
+      contents: write
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
@@ -47,6 +52,10 @@ jobs:
       - name: Export verification
         run: |
           if [ -f remaster/tests/test_exports.py ]; then python3 remaster/tests/test_exports.py; fi
+      - name: Save verified assets to development branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 remaster/tools/save_generated_assets.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

@@ -4,10 +4,11 @@ Development branch: `feature/world-remaster`. Main snapshot:
 `13b53c1d4987dc2f694e83cde01f9433fe28b855`.
 
 ## What is implemented
-- A 98-component modular laboratory kit with five cumulative architectural stages.
+- A 97-component modular laboratory kit with five cumulative architectural stages.
 - Existing backend levels 0–6 map to visual tiers 1, 2, 2, 3, 4, 4, 5. Costs and unlock rules are unchanged.
 - A 299-component world overlay: reactor buttresses/crown, plaza edges/seating, planted discovery beds, social backdrop, event framing, shop canopy and labelled future-region foundations.
 - Reversible server integration for all 12 existing plot transforms. Existing pads, terminals, signs, ownership, collisions and teleports remain the gameplay authority.
+- Distance culling for small plant/stone details, with a shorter distance in the existing low-graphics setting. Structural elements stay visible.
 - Restrained daylight adjustments with rollback. Existing reactor/pet animation remains active.
 - One shared recipe drives both the Blender mesh exports and Roblox primitive placement.
 - Original UI, creatures, persistence, economy and raid logic are preserved.
@@ -15,7 +16,9 @@ Development branch: `feature/world-remaster`. Main snapshot:
 ## Cloud build
 The Actions workflow runs on a GitHub-hosted Ubuntu runner. It installs Blender, compiles all Luau sources, tests reserved clearances and progression, generates real .blend, .glb, .fbx and PNG files, then verifies export integrity and records actual geometry counts.
 
-Download `world-remaster-cloud-artifacts` from the latest successful Actions run. Artifacts are retained for 90 days; the committed recipe and generator reproduce them.
+Verified outputs are saved permanently under `remaster/generated/` on the development branch by the cloud job. The manifest records the exact source commit and file hashes. A concurrent branch update aborts asset saving instead of overwriting newer work. Main is never targeted.
+
+The same outputs are also available as `world-remaster-cloud-artifacts` on the successful Actions run (90-day artifact retention). The committed recipe and generator reproduce them.
 
 Generated files:
 - `MutantMayhem_Environment.blend`: five lab collections, world overlay, preserved-layout reference stage and render setup.

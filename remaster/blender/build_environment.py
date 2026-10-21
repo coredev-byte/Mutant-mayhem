@@ -1,7 +1,7 @@
 """Reproducible Blender 4.0+ cloud builder. Units are Roblox studs.
 Generated exports contain visual overlays only, never gameplay markers/colliders.
 """
-import bpy, json, math, pathlib, hashlib, base64
+import bpy, json, math, pathlib, hashlib, base64, os
 from mathutils import Vector, Matrix
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 OUT=ROOT/"remaster/build"
@@ -68,13 +68,22 @@ def select(objects):
 def triangles(objects):
     return sum(sum(len(p.vertices)-2 for p in obj.data.polygons) for obj in objects)
 def export(objects,name):
-    select(objects)
+    root=bpy.data.objects.new(name+"_ROOT",None)
+    bpy.context.scene.collection.objects.link(root)
+    root["roblox_origin"]="existing Base.CFrame; world overlay uses identity"
+    for obj in objects: obj.parent=root
+    select([root,*objects])
     bpy.ops.export_scene.gltf(filepath=str(OUT/(name+".glb")),export_format="GLB",use_selection=True,export_yup=True,export_extras=True)
-    bpy.ops.export_scene.fbx(filepath=str(OUT/(name+".fbx")),use_selection=True,object_types={"MESH"},axis_forward="-Z",axis_up="Y",add_leaf_bones=False)
+    bpy.ops.export_scene.fbx(filepath=str(OUT/(name+".fbx")),use_selection=True,object_types={"MESH","EMPTY"},axis_forward="-Z",axis_up="Y",add_leaf_bones=False)
+    bpy.context.view_layer.update()
+    corners=[B.transposed()@(obj.matrix_world@Vector(corner)) for obj in objects for corner in obj.bound_box]
+    low=[min(v[i] for v in corners) for i in range(3)]
+    high=[max(v[i] for v in corners) for i in range(3)]
     return {"name":name,"objects":len(objects),"triangles":triangles(objects),
+            "boundsRoblox":{"min":low,"max":high,"size":[high[i]-low[i] for i in range(3)]},
             "pivot":[0,0,0],"scale":"1 unit = 1 Roblox stud; verify import bounds",
             "files":[name+".glb",name+".fbx"]}
-tiers=[]; manifest={"blender":bpy.app.version_string,"source":"remaster/design/environment.json","assets":[]}
+tiers=[]; manifest={"source_commit":os.environ.get("GITHUB_SHA","manual"),"blender":bpy.app.version_string,"source":"remaster/design/environment.json","assets":[]}
 for tier in range(1,6):
     col=collection("LAB_Tier_"+str(tier))
     objs=[component(item,col) for item in recipe["lab"] if item["minTier"]<=tier]
@@ -96,7 +105,7 @@ for i in range(12):
 # Avatar clearance silhouette, labelled as reference rather than an exported character.
 ref("Avatar_Clearance",[2,5,1.2],[0,3.5,-11],"metal")
 scene=bpy.context.scene
-scene.render.engine="CYCLES"; scene.cycles.device="CPU"; scene.cycles.samples=32
+scene.render.engine="CYCLES"; scene.cycles.device="CPU"; scene.cycles.samples=96
 scene.cycles.use_denoising=False  # Ubuntu build lacks OpenImageDenoiser; CPU path tracing remains supported.
 scene.render.resolution_x=800; scene.render.resolution_y=600; scene.render.resolution_percentage=100
 scene.world.use_nodes=True
