@@ -36,7 +36,7 @@ function gameMock:GetService(name) return services[name] end
 local enum=setmetatable({},{__index=function(t,k) local v=setmetatable({},{__index=function(_,name) return name end}) rawset(t,k,v) return v end})
 local cache={Components=C}
 local env=setmetatable({
- game=gameMock,Enum=enum,UDim2=U,Vector2={new=function(x,y) return {X=x,Y=y} end},
+ game=gameMock,script={Parent={Components="Components",Theme="Theme"}},Enum=enum,UDim2=U,Vector2={new=function(x,y) return {X=x,Y=y} end},
  Color3={fromRGB=function(...) return {...} end},TweenInfo={new=function() return {} end},
 }, {__index=getfenv()})
 env.require=function(name)
