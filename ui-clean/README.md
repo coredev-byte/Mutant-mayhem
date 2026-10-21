@@ -26,3 +26,10 @@ Actual Roblox visual, touch and controller playtests are still required. No Stud
 Sync this branch to a recoverable copy. Verify desktop, 390x844 portrait and 750x381 landscape including Roblox safe insets. Test gamepad focus through every menu, B/Esc hierarchy, touch scrolling, collection failures, loading, save failure, first placement and live event state. Compare with the old HUD from main `13b53c1d4987dc2f694e83cde01f9433fe28b855`.
 
 This branch does not change persistence, economy, creatures or world geometry.
+
+## Verified cloud run
+[Run 39537335370](https://github.com/coredev-byte/Mutant-mayhem/actions/runs/39537335370) passed all compilation, layout/state and actual HUD/controller callback tests. Callback tests use UI API doubles; they do not simulate Roblox rendering or physical input devices.
+
+![Desktop layout illustration](preview-desktop.png)
+
+This is a layout illustration generated from the actual HUD instance tree through the test harness. It uses substitute icon glyphs and a neutral background; it is not a Roblox screenshot. Desktop, portrait and landscape SVG/PNG versions are also saved in the run artifact.
